@@ -14,7 +14,12 @@ namespace Sec4_Ex_InterviewQuestion {
             Console.WriteLine(ContainCommon(arr3, arr4)); // true
         }
 
-        // first attempt
+        // naive approach - usually enough to describe this and not code it - but you can depending on your time
+        // let interviewer know this is the easy/naive approach and not necessarily most effecient
+        // but at least you have the correct answer which is better than running out of time and not having an answer
+        // good starting point to improve your approach 
+        // O(n^2) if arrays are same size - otherwise O(a*b) - really slow
+        // try to avoid nested loops in a tech interview
         public static bool ContainCommon(char[] arrOne, char[] arrTwo) {
 
             for (int i = 0; i < arrOne.Length; i++) {
