@@ -131,7 +131,7 @@ namespace Sec4_Ex_InterviewQuestion
             // basically checks if any of the keys in arrOne == any of the keys in arrTwo
             // Enumerable.Any() determines whether any element of a sequence exists or satisfies a condition
             // https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.any?view=net-6.0
-            return arrOne.Any(key => arrTwo.Contains(key));
+            return arrOne.Any(arrTwo.Contains);
         }
 
         //Think about step 11 in the interview cheatsheet

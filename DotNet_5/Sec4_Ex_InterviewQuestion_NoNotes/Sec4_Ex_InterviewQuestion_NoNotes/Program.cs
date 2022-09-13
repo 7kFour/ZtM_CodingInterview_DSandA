@@ -45,7 +45,7 @@ namespace Sec4_Ex_InterviewQuestion_NoNotes {
 
             var commonItems = new HashSet<char>();
 
-            // loop through first array, add char values as key and true as value 
+            // loop through first array, add char values to set if they dont exist
             foreach (char item in arrOne) {
                 if (!commonItems.Contains(item)) {
                     commonItems.Add(item);
@@ -65,7 +65,7 @@ namespace Sec4_Ex_InterviewQuestion_NoNotes {
         // Using Linq for readability 
         public static bool CleanerContainCommon(char[] arrOne, char[] arrTwo) {
             // determines whether any element of a sequence exists or satisfies a condition
-            return arrOne.Any(item => arrTwo.Contains(item));
+            return arrOne.Any(arrTwo.Contains);
         }
     }
 }

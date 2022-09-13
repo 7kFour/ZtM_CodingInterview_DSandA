@@ -36,14 +36,14 @@ static bool BetterContainCommon(char[] arrOne, char[] arrTwo) {
 
     var commonItems = new HashSet<char>();
 
-    // loop through first array, add char values as key and true as value 
+    // loop through first array, add chars to set if they don't exist
     foreach (char item in arrOne) {
         if (!commonItems.Contains(item)) {
             commonItems.Add(item);
         }
     }
 
-    // loop through second array, check if value exists as key in hashset
+    // loop through second array, check if value exists in set
     foreach (char item in arrTwo) {
         if (commonItems.Contains(item)) {
             return true;
@@ -56,5 +56,5 @@ static bool BetterContainCommon(char[] arrOne, char[] arrTwo) {
 // Using Linq for readability 
 static bool CleanerContainCommon(char[] arrOne, char[] arrTwo) {
     // determines whether any element of a sequence exists or satisfies a condition
-    return arrOne.Any(key => arrTwo.Contains(key));
+    return arrOne.Any(arrTwo.Contains);
 }
